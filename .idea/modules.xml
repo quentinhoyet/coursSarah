@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Canvas.iml" filepath="$PROJECT_DIR$/.idea/Canvas.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Convertisseur/.idea/Convertisseur.iml" filepath="$PROJECT_DIR$/../Convertisseur/.idea/Convertisseur.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Pokemon/.idea/Pokemon.iml" filepath="$PROJECT_DIR$/../Pokemon/.idea/Pokemon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../SavoirInutiles/.idea/SavoirInutiles.iml" filepath="$PROJECT_DIR$/../SavoirInutiles/.idea/SavoirInutiles.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../proposition/.idea/proposition.iml" filepath="$PROJECT_DIR$/../../proposition/.idea/proposition.iml" />
     </modules>
   </component>
 </project>
