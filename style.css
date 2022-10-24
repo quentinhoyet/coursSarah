@@ -91,11 +91,11 @@ h4{
     }
 }
 
-.rotate sarahGauche{
+#sarahGauche{
     margin-right: 170px;
     margin-bottom: 170px;
 }
-.rotate sarahDroite{
+#sarahDroite{
     margin-left: 150px;
     margin-bottom: 170px;
 }
