@@ -9,8 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Convertisseur" />
-    <orderEntry type="module" module-name="proposition" />
     <orderEntry type="module" module-name="Pokemon" />
-    <orderEntry type="module" module-name="SavoirInutiles" />
   </component>
 </module>

@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 500px;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid pink;
     background-image: url("./images/carte.jpg");
     background-size: 100%;
 }
@@ -15,17 +15,34 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-
-
 body {
     background-color: black;
     text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
 
+h1{
+    text-decoration-style: dashed;
+    color: goldenrod;
+    margin: auto 20px auto 20px;
+    font-size: 2em;
+
+}
+h1:hover{
+    color: pink;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    opacity: 0.90;
+    cursor: pointer;
 }
 
 #bouton{
     text-align: center;
-
 }
 
 button{
@@ -65,9 +82,6 @@ hr{
     width : 30%;
     background-color: goldenrod;
 }
-h1{
-    color: white;
-}
 h4{
     font-style: italic;
     color: goldenrod;
@@ -83,7 +97,6 @@ h4{
         width: 100%;
         max-width: 500px;
     }
-
 }
 
 #sarahGauche{
@@ -93,4 +106,29 @@ h4{
 #sarahDroite{
     margin-left: 150px;
     margin-bottom: 170px;
+}
+
+.rotate img{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.rotate :hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.rotate1 img{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.rotate1 :hover{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.rotate2 img{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.rotate2 :hover{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

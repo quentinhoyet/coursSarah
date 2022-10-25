@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cours Sarah !</title>
     <script src="main.js" defer>  </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/test1.gif" type="image/x-icon">
+    
 </head>
 <body>
-<h1>Va voir Mickey !</h1>
+<nav>
+    <div class="rotate1">
+        <img class="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
+    </div>
+    <h1>Va voir Mickey !</h1>
+    <div class="rotate2">
+        <img id="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
+    </div>
+</nav>
 
-<img id="sarahGauche" width="5%"></img>
+<span class="rotate">
+<img id="sarahGauche" width="5%">
+</span>
 
 <canvas id="monCanvas"></canvas>
 
-<img id="sarahDroite" width="5%"></img>
+<span class="rotate">
+<img id="sarahDroite" width="5%">
+</span>
 <div id="button">
     <div>
         <button id="btnHaut">Haut</button>
