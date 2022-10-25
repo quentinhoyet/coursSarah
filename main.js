@@ -344,7 +344,7 @@ fetch(url)
     .then(reponse=>reponse.json())
     .then(res => {
     texte = document.createElement("h4");
-    texte.innerText= res.citation.citation;
+    texte.innerText= res.citation.infos.personnage +' : '+ res.citation.citation;
     kaamelott.appendChild(texte);
     })
 
