@@ -97,69 +97,75 @@ let valeurY =20;
 let valeurX =20;
 
 //********************************* DEPLACEMENT MECHANTS  *********************************************
+let direction1;
+let direction2
+function choixDirection1(){
+     return direction1 = (Math.floor(Math.random() * 4));
+}
+function choixDirection2(){
+    return direction2 = (Math.floor(Math.random() * 4));
+}
+
 
 function deplacementMechant(){
     let valeurXMechant = aleatoireMechant1X;
     let valeurYMechant = aleatoireMechant1Y;
 
-    let direction = (Math.floor(Math.random() * 4));
+        switch(direction1){
+            case 0 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
+                if (aleatoireMechant1X < 450) {
+                    aleatoireMechant1X += 5;
+                } else {
+                    aleatoireMechant1X = 450;
+                }
+                aleatoireMechant1Y = valeurYMechant;
+                ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
+                valeurYMechant = aleatoireMechant1Y;
+                valeurXMechant = aleatoireMechant1X;
+                break;
 
-    switch(direction){
-        case 0 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-            if (aleatoireMechant1X < 450) {
-                aleatoireMechant1X += 5;
-            } else {
-                aleatoireMechant1X = 450;
-            }
-            aleatoireMechant1Y = valeurYMechant;
-            ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
-            valeurYMechant = aleatoireMechant1Y;
-            valeurXMechant = aleatoireMechant1X; break;
 
+            case 1 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
+                if (aleatoireMechant1X > 0) {
+                    aleatoireMechant1X -= 5;
+                } else {
+                    aleatoireMechant1X = 0;
+                }
+                aleatoireMechant1Y = valeurYMechant;
+                ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
+                valeurYMechant = aleatoireMechant1Y;
+                valeurXMechant = aleatoireMechant1X; break;
 
-        case 1 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-            if (aleatoireMechant1X > 0) {
-                aleatoireMechant1X -= 5;
-            } else {
-                aleatoireMechant1X = 0;
-            }
-            aleatoireMechant1Y = valeurYMechant;
-            ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
-            valeurYMechant = aleatoireMechant1Y;
-            valeurXMechant = aleatoireMechant1X; break;
+            case 2 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
+                if (aleatoireMechant1Y < 450) {
+                    aleatoireMechant1Y += 5;
+                } else {
+                    aleatoireMechant1Y = 450;
+                }
+                aleatoireMechant1X = valeurXMechant;
+                ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
+                valeurYMechant = aleatoireMechant1Y;
+                valeurXMechant = aleatoireMechant1X;break;
 
-        case 2 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-            if (aleatoireMechant1Y < 450) {
-                aleatoireMechant1Y += 5;
-            } else {
-                aleatoireMechant1Y = 450;
-            }
-            aleatoireMechant1X = valeurXMechant;
-            ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
-            valeurYMechant = aleatoireMechant1Y;
-            valeurXMechant = aleatoireMechant1X;break;
-
-        case 3 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-            if (aleatoireMechant1Y > 0) {
-                aleatoireMechant1Y -= 5;
-            } else {
-                aleatoireMechant1Y = 0;
-            }
-            aleatoireMechant1X = valeurXMechant;
-            ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
-            valeurYMechant = aleatoireMechant1Y;
-            valeurXMechant = aleatoireMechant1X;break;
+            case 3 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
+                if (aleatoireMechant1Y > 0) {
+                    aleatoireMechant1Y -= 5;
+                } else {
+                    aleatoireMechant1Y = 0;
+                }
+                aleatoireMechant1X = valeurXMechant;
+                ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
+                valeurYMechant = aleatoireMechant1Y;
+                valeurXMechant = aleatoireMechant1X;break;
+        }
+        perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);
     }
-    perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);
-}
 
 function deplacementMechant2(){
     let valeurXMechant = aleatoireMechant2X;
     let valeurYMechant = aleatoireMechant2Y;
 
-    let direction = (Math.floor(Math.random() * 4));
-
-    switch(direction){
+    switch(direction2){
         case 0 : ctx.clearRect(aleatoireMechant2X, aleatoireMechant2Y, 20,20);
             if (aleatoireMechant2X < 450) {
                 aleatoireMechant2X += 5;
@@ -352,7 +358,9 @@ document.getElementById("btnBas").addEventListener("click", deplacerSarahBas);
 document.onkeydown = changerDirection;
 
 window.onload = setInterval(deplacementMechant, 150);
+window.onload = setInterval(choixDirection1, 500);
 window.onload = setInterval(deplacementMechant2, 150);
+window.onload = setInterval(choixDirection2, 700);
 window.onload = animate();
 window.onload = animate2();
 
