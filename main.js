@@ -20,6 +20,8 @@ let aleatoireMechant1Y = aleatoire(MIN,MAX);
 let aleatoireMechant2X = aleatoire(MIN,MAX);
 let aleatoireMechant2Y = aleatoire(MIN,MAX);
 
+
+console.log(aleatoireMechant1X, aleatoireMechant1Y);
 //********************************  CREER MECHANTS ***************************************
 let mechant1 = new Image(20,20);
 mechant1.src = "./images/mechant.gif"
@@ -61,7 +63,7 @@ function sarah(){
     }
 }
 
-//********************************  CREER TROUVE  ****************************************
+//*****************************************  CREER TROUVE  ***********************************************
 function trouve(x,y,aleaX,aleaY){
     maxX = aleaX+20;
     maxY = aleaY+20;
@@ -76,11 +78,14 @@ function gagne(){
     window.location.href="victoire.html";
 }
 
-//******************************** CREER PERDU  ******************************************
+//************************************* CREER PERDU  ******************************************************
 function perdu(mechantX,mechantY,x,y){
-    maxX = mechantX+20;
-    maxY = mechantY+20;
-    if((x>=mechantX && x<=maxX) && (y>=mechantY && y<=maxY)) {
+    maxX = mechantX+15;
+    maxY = mechantY+15;
+    minX = mechantX-15;
+    minY = mechantY-15;
+
+    if((x>=minX && x<=maxX) && (y>=minY && y<=maxY)) {
         return loose();
     }
 }
@@ -113,10 +118,10 @@ function deplacementMechant(){
 
         switch(direction1){
             case 0 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-                if (aleatoireMechant1X < 450) {
+                if (aleatoireMechant1X < 480) {
                     aleatoireMechant1X += 5;
                 } else {
-                    aleatoireMechant1X = 450;
+                    aleatoireMechant1X = 480;
                 }
                 aleatoireMechant1Y = valeurYMechant;
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
@@ -137,10 +142,10 @@ function deplacementMechant(){
                 valeurXMechant = aleatoireMechant1X; break;
 
             case 2 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
-                if (aleatoireMechant1Y < 450) {
+                if (aleatoireMechant1Y < 480) {
                     aleatoireMechant1Y += 5;
                 } else {
-                    aleatoireMechant1Y = 450;
+                    aleatoireMechant1Y = 480;
                 }
                 aleatoireMechant1X = valeurXMechant;
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
@@ -167,10 +172,10 @@ function deplacementMechant2(){
 
     switch(direction2){
         case 0 : ctx.clearRect(aleatoireMechant2X, aleatoireMechant2Y, 20,20);
-            if (aleatoireMechant2X < 450) {
+            if (aleatoireMechant2X < 480) {
                 aleatoireMechant2X += 5;
             } else {
-                aleatoireMechant2X = 450;
+                aleatoireMechant2X = 480;
             }
             aleatoireMechant2Y = valeurYMechant;
             ctx.drawImage(mechant2, aleatoireMechant2X, aleatoireMechant2Y);
@@ -189,10 +194,10 @@ function deplacementMechant2(){
             valeurXMechant = aleatoireMechant2X; break;
 
         case 2 : ctx.clearRect(aleatoireMechant2X, aleatoireMechant2Y, 20,20);
-            if (aleatoireMechant2Y < 450) {
+            if (aleatoireMechant2Y < 480) {
                 aleatoireMechant2Y += 5;
             } else {
-                aleatoireMechant2Y = 450;
+                aleatoireMechant2Y = 480;
             }
             aleatoireMechant2X = valeurXMechant;
             ctx.drawImage(mechant2, aleatoireMechant2X, aleatoireMechant2Y);
@@ -226,8 +231,8 @@ function deplacerSarahDroite() {
     valeurY = y;
     valeurX = x;
     trouve(valeurX,valeurY,aleatoireMickeyX, aleatoireMickeyY);
-    perdu(valeurX, valeurY,aleatoireMechant1X,aleatoireMechant1Y);
-    perdu(valeurX,valeurY,aleatoireMechant2X, aleatoireMechant2Y);
+    perdu(aleatoireMechant1X, aleatoireMechant1Y, valeurX, valeurY);
+    perdu(aleatoireMechant2X, aleatoireMechant2Y, valeurX, valeurY);
     console.log(valeurX, valeurY);
 }
 
@@ -243,8 +248,8 @@ function deplacerSarahGauche() {
     valeurY = y;
     valeurX = x;
     trouve(valeurX,valeurY,aleatoireMickeyX, aleatoireMickeyY);
-    perdu(valeurX, valeurY,aleatoireMechant1X,aleatoireMechant1Y);
-    perdu(valeurX,valeurY,aleatoireMechant2X, aleatoireMechant2Y);
+    perdu(aleatoireMechant1X, aleatoireMechant1Y, valeurX, valeurY);
+    perdu(aleatoireMechant2X, aleatoireMechant2Y, valeurX, valeurY);
     console.log(valeurX, valeurY);
 }
 
@@ -260,8 +265,8 @@ function deplacerSarahHaut() {
     valeurY = y
     valeurX = x;
     trouve(valeurX,valeurY,aleatoireMickeyX, aleatoireMickeyY);
-    perdu(valeurX, valeurY,aleatoireMechant1X,aleatoireMechant1Y);
-    perdu(valeurX,valeurY,aleatoireMechant2X, aleatoireMechant2Y);
+    perdu(aleatoireMechant1X, aleatoireMechant1Y, valeurX, valeurY);
+    perdu(aleatoireMechant2X, aleatoireMechant2Y, valeurX, valeurY);
     console.log(valeurX, valeurY);
 }
 
@@ -277,10 +282,69 @@ function deplacerSarahBas() {
     valeurY = y
     valeurX = x;
     trouve(valeurX,valeurY,aleatoireMickeyX, aleatoireMickeyY);
-    perdu(valeurX, valeurY,aleatoireMechant1X,aleatoireMechant1Y);
-    perdu(valeurX,valeurY,aleatoireMechant2X, aleatoireMechant2Y);
+    perdu(aleatoireMechant1X, aleatoireMechant1Y, valeurX, valeurY);
+    perdu(aleatoireMechant2X, aleatoireMechant2Y, valeurX, valeurY);
     console.log(valeurX, valeurY);
     }
+
+
+//***********************************************************************************
+let directionM;
+
+function choixDirectionM(){
+    return directionM = (Math.floor(Math.random() * 4));
+}
+
+function deplacementMickey(){
+    let valeurXMickey = aleatoireMickeyX;
+    let valeurYMickey = aleatoireMickeyY;
+
+    switch(directionM){
+        case 0 : ctx.clearRect(aleatoireMickeyX, aleatoireMickeyY, 20,20);
+            if (aleatoireMickeyX < 480) {
+                aleatoireMickeyX += 5;
+            } else {
+                aleatoireMickeyX = 480;
+            }
+            aleatoireMickeyY = valeurYMickey;
+            ctx.drawImage(mickey, aleatoireMickeyX, aleatoireMickeyY);
+            valeurXMickey = aleatoireMickeyX;
+            valeurYMickey = aleatoireMickeyY;break;
+
+        case 1 : ctx.clearRect(aleatoireMickeyX, aleatoireMickeyY, 20,20);
+            if (aleatoireMickeyX > 0) {
+                aleatoireMickeyX -= 5;
+            } else {
+                aleatoireMickeyX = 0;
+            }
+            aleatoireMickeyY = valeurYMickey;
+            ctx.drawImage(mickey, aleatoireMickeyX, aleatoireMickeyY);
+            valeurXMickey = aleatoireMickeyX;
+            valeurYMickey = aleatoireMickeyY;break;
+
+        case 2 : ctx.clearRect(aleatoireMickeyX, aleatoireMickeyY, 20,20);
+            if (aleatoireMickeyY < 480) {
+                aleatoireMickeyY += 5;
+            } else {
+                aleatoireMickeyY = 480;
+            }
+            aleatoireMickeyX = valeurXMickey;
+            ctx.drawImage(mickey, aleatoireMickeyX, aleatoireMickeyY);
+            valeurXMickey = aleatoireMickeyX;
+            valeurYMickey = aleatoireMickeyY;break;
+
+        case 3 : ctx.clearRect(aleatoireMickeyX, aleatoireMickeyY, 20,20);
+            if (aleatoireMickeyY > 0) {
+                aleatoireMickeyY -= 5;
+            } else {
+                aleatoireMickeyY = 0;
+            }
+            aleatoireMickeyX = valeurXMickey;
+            ctx.drawImage(mickey, aleatoireMickeyX, aleatoireMickeyY);
+            valeurXMickey = aleatoireMickeyX;
+            valeurYMickey = aleatoireMickeyY;break;
+    }
+}
 
 
 function changerDirection(e){
@@ -313,6 +377,7 @@ function animate(){
     mouv();
     setInterval(mouv,200);
 }
+
                             // *************** DROITE ************************
 
 let nbImg2 = 2;
@@ -339,7 +404,6 @@ function animate2(){
 kaamelott = document.getElementById("kaamelott")
 url = "https://kaamelott.chaudie.re/api/random";
 
-
 fetch(url)
     .then(reponse=>reponse.json())
     .then(res => {
@@ -361,8 +425,8 @@ window.onload = setInterval(deplacementMechant, 150);
 window.onload = setInterval(choixDirection1, 500);
 window.onload = setInterval(deplacementMechant2, 150);
 window.onload = setInterval(choixDirection2, 700);
+window.onload = setInterval(deplacementMickey, 150);
+window.onload = setInterval(choixDirectionM, 700);
 window.onload = animate();
 window.onload = animate2();
-
-console.log(aleatoireMickeyX, aleatoireMickeyY);
 

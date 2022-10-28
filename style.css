@@ -25,6 +25,10 @@ nav{
     align-items: center;
     margin-bottom: 50px;
 }
+main{
+    display: flex;
+    justify-content: space-around;
+}
 
 h1{
     text-decoration-style: dashed;
@@ -67,7 +71,6 @@ button:active{
     margin-top: 5px;
     cursor: grabbing;
 }
-
 a{
     text-decoration: none;
     color: goldenrod;
@@ -98,16 +101,6 @@ h4{
         max-width: 500px;
     }
 }
-
-#sarahGauche{
-    margin-right: 170px;
-    margin-bottom: 170px;
-}
-#sarahDroite{
-    margin-left: 150px;
-    margin-bottom: 170px;
-}
-
 .rotate img{
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -131,4 +124,37 @@ h4{
 .rotate2 :hover{
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+#sarahGauche{
+    margin : auto;
+    animation-duration: 4s;
+    animation-name: mouv1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#sarahDroite{
+    margin : auto;
+    animation-duration: 4s;
+    animation-name: mouv2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes mouv1 {
+    from{
+        margin-top: 0%;
+    }
+    to{
+        margin-top: 500%;
+    }
+}
+
+@keyframes mouv2 {
+    from{
+        margin-top: 500%;
+    }
+    to{
+        margin-top: 0%;
+    }
 }

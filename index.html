@@ -9,37 +9,38 @@
     
 </head>
 <body>
-<nav>
-    <div class="rotate1">
-        <img class="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
-    </div>
-    <h1>Va voir Mickey !</h1>
-    <div class="rotate2">
-        <img id="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
-    </div>
-</nav>
+    <nav>
+        <div class="rotate1">
+            <img class="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
+        </div>
+        <h1>Va voir Mickey !</h1>
+        <div class="rotate2">
+            <img id="sarahLogo" src="images/test1.gif" alt="logoSarahQuiTourne" width="40px">
+        </div>
+    </nav>
 
-<span class="rotate">
-<img id="sarahGauche" width="5%">
-</span>
+    <main>
+        <div id="gauche" class="rotate">
+            <img id="sarahGauche" width="80px">
+        </div>
+        <canvas id="monCanvas"></canvas>
+        <div id="droite" class="rotate">
+            <img id="sarahDroite" width="80px">
+        </div>
+    </main>
 
-<canvas id="monCanvas"></canvas>
-
-<span class="rotate">
-<img id="sarahDroite" width="5%">
-</span>
-<div id="button">
-    <div>
-        <button id="btnHaut">Haut</button>
+    <div id="button">
+        <div>
+            <button id="btnHaut">Haut</button>
+        </div>
+        <button id="btnGauche">Gauche</button>
+        <button id="btnBas">Bas</button>
+        <button id="btnDroite">Droite</button>
     </div>
-    <button id="btnGauche">Gauche</button>
-    <button id="btnBas">Bas</button>
-    <button id="btnDroite">Droite</button>
-</div>
-<div id="kaamelott"></div>
-<footer>
-    <hr>
-    <a href="#">Sarah&Quentin &copy;</a>
-</footer>
+    <div id="kaamelott"></div>
+    <footer>
+        <hr>
+        <a href="#">Sarah&Quentin &copy;</a>
+    </footer>
 </body>
 </html>
