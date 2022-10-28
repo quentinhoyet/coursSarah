@@ -127,7 +127,7 @@ function deplacementMechant(){
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
                 valeurYMechant = aleatoireMechant1Y;
                 valeurXMechant = aleatoireMechant1X;
-                break;
+                perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);break;
 
 
             case 1 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
@@ -139,7 +139,8 @@ function deplacementMechant(){
                 aleatoireMechant1Y = valeurYMechant;
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
                 valeurYMechant = aleatoireMechant1Y;
-                valeurXMechant = aleatoireMechant1X; break;
+                valeurXMechant = aleatoireMechant1X;
+                perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);break;
 
             case 2 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
                 if (aleatoireMechant1Y < 480) {
@@ -150,7 +151,8 @@ function deplacementMechant(){
                 aleatoireMechant1X = valeurXMechant;
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
                 valeurYMechant = aleatoireMechant1Y;
-                valeurXMechant = aleatoireMechant1X;break;
+                valeurXMechant = aleatoireMechant1X;
+                perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);break;
 
             case 3 : ctx.clearRect(aleatoireMechant1X, aleatoireMechant1Y, 20,20);
                 if (aleatoireMechant1Y > 0) {
@@ -161,9 +163,10 @@ function deplacementMechant(){
                 aleatoireMechant1X = valeurXMechant;
                 ctx.drawImage(mechant1, aleatoireMechant1X, aleatoireMechant1Y);
                 valeurYMechant = aleatoireMechant1Y;
-                valeurXMechant = aleatoireMechant1X;break;
+                valeurXMechant = aleatoireMechant1X;
+                perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);break;
         }
-        perdu(aleatoireMechant1X,aleatoireMechant1Y,aleatoireMickeyX, aleatoireMickeyY);
+
     }
 
 function deplacementMechant2(){
